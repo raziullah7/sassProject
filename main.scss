@@ -1,0 +1,59 @@
+@import ./utils/variables;
+@import ./utils/functions;
+@import ./utils/mixins;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // 10px div by def of 16px
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    background: $colour-secondary;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $colour-primary;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+    font-style: italic;
+}
+
+textarea {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2.75rem;
+}
+
+.container {
+    margin: $layout-margin;
+    padding: $grid-gutter $grid-gutter 0 $grid-gutter;
+    @include border($colour-accent);
+}
+
+@import ./latout/form;
+@import ./layouts/header;
+@import ./layouts/nav;
